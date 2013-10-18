@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "pysendmail",
-    version = "1.0.0",
+    version = "1.1.0",
     url = 'https://github.com/sikaondrej/pysendmail/',
     license = 'MIT',
     description = "Send email from Python",
