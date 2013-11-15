@@ -44,3 +44,28 @@ long argumens
 long argumens (inline)
 
     pysendmail --fromemail from@gmail.com --toeamail to@gmail.com --message "message from pysendmail" --user from@gmail.com --password password --server smtp.gmail.com:587
+
+bash variables
+
+```
+PYSENDMAIL_FROM="from@gmail.com"
+PYSENDMAIL_USER="from@gmail.com"
+PYSENDMAIL_PASSWORD="password"
+PYSENDMAIL_SERVER="smtp.gmail.com:587"
+
+pysendmail --fromemail from@gmail.com --message "message from pysendmail"
+```
+
+or
+
+```
+PYSENDMAIL_FROM="from@gmail.com"
+PYSENDMAIL_USER="from@gmail.com"
+PYSENDMAIL_PASSWORD="password"
+PYSENDMAIL_SERVER="smtp.gmail.com:587"
+
+PYSENDMAIL_TO="to@gmail.com"
+PYSENDMAIL_MESSAGE="message from pysendmail"
+
+pysendmail
+```
