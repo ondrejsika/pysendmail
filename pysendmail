@@ -4,19 +4,29 @@
 # author: Ondrej Sika, http://ondrejsika.com, ondrej@ondrejsika.com
 # licence: MIT
 
+import os
 import argparse
 
 from libpysendmail import sendmail
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--fromemail", help="from email", required=True)
-parser.add_argument("-t", "--toemail", help="to email", required=True)
-parser.add_argument("-m", "--message", help="message", required=True)
+FROM = os.environ.get("PYSENDMAIL_FROM", None)
+TO = os.environ.get("PYSENDMAIL_TO", None)
+MESSAGE = os.environ.get("PYSENDMAIL_MESSAGE", None)
 
-parser.add_argument("-u", "--user", help="user", required=True)
-parser.add_argument("-p", "--password", help="password", required=True)
-parser.add_argument("-s", "--server", help="server:port", required=True)
+USER = os.environ.get("PYSENDMAIL_USER", None)
+SERVER = os.environ.get("PYSENDMAIL_SERVER", None)
+PASSWORD = os.environ.get("PYSENDMAIL_PASSWORD", None)
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", "--fromemail", help="from email", required=(False if FROM else True), default=FROM)
+parser.add_argument("-t", "--toemail", help="to email", required=(False if TO else True), default=TO)
+parser.add_argument("-m", "--message", help="message", required=(False if MESSAGE else True), default=MESSAGE)
+
+parser.add_argument("-u", "--user", help="user", required=(False if USER else True), default=USER)
+parser.add_argument("-p", "--password", help="password", required=(False if PASSWORD else True), default=PASSWORD)
+parser.add_argument("-s", "--server", help="server:port", required=(False if SERVER else True), default=SERVER)
 
 
 if __name__ == "__main__":
