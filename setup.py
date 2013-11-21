@@ -6,9 +6,9 @@ from setuptools import setup, find_packages
 setup(
     name = "pysendmail",
     version = "1.2.0",
-    url = 'https://github.com/sikaondrej/pysendmail/',
+    url = 'https://github.com/ondrejsika/pysendmail/',
     license = 'MIT',
-    description = "Send email from Python",
+    description = "Send email from BASH via Python",
     author = 'Ondrej Sika',
     author_email = 'ondrej@ondrejsika.com',
     py_modules = ["libpysendmail"],
