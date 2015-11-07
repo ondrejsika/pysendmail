@@ -25,12 +25,13 @@ short arguments
         -m "message from pysendmail" \
         -u from@gmail.com \
         -p password \
-        -s smtp.gmail.com:587
+        -s smtp.gmail.com:587 \
+        -T TRUE
 
 
 short argumens (inline)
 
-    pysendmail -f from@gmail.com -t to@gmail.com -m "message from pysendmail" -u from@gmail.com -p password -s smtp.gmail.com:587
+    pysendmail -f from@gmail.com -t to@gmail.com -m "message from pysendmail" -u from@gmail.com -p password -s smtp.gmail.com:587 -T TRUE
 
 long argumens
  
@@ -39,7 +40,8 @@ long argumens
         --message "message from pysendmail" \
         --user from@gmail.com \
         --password password \
-        --server smtp.gmail.com:587
+        --server smtp.gmail.com:587 \
+        --tls TRUE
 
 long argumens (inline)
 
@@ -52,6 +54,7 @@ PYSENDMAIL_FROM="from@gmail.com"
 PYSENDMAIL_USER="from@gmail.com"
 PYSENDMAIL_PASSWORD="password"
 PYSENDMAIL_SERVER="smtp.gmail.com:587"
+PYSENDMAIL_TLS="TRUE"
 
 pysendmail --fromemail from@gmail.com --message "message from pysendmail"
 ```
@@ -63,6 +66,7 @@ PYSENDMAIL_FROM="from@gmail.com"
 PYSENDMAIL_USER="from@gmail.com"
 PYSENDMAIL_PASSWORD="password"
 PYSENDMAIL_SERVER="smtp.gmail.com:587"
+PYSENDMAIL_TLS="TRUE"
 
 PYSENDMAIL_TO="to@gmail.com"
 PYSENDMAIL_MESSAGE="message from pysendmail"
