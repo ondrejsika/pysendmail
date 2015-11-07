@@ -1,25 +1,23 @@
-pysendmail
-==========
+# pysendmail
 
 Send email from Python
 
-#### Authors
-*  Ondrej Sika, <http://ondrejsika.com>, ondrej@ondrejsika.com
+- author, maintainer: __Ondrej Sika__, <ondrej@ondrejsika.com>
+- license: __MIT__, <https://ondrejsika.com/license/mit.txt>
+- Python Package Index: <http://pypi.python.org/pypi/pysendmail>
+- GitHub: <https://github.com/ondrejsika/pysendmail>
 
-#### Source
-* Python Package Index: <http://pypi.python.org/pypi/pysendmail>
-* GitHub: <https://github.com/sikaondrej/pysendmail>
 
-Documentation
--------------
+## Documentation
 
 ### Installation
 
     pip install pysendmail
 
+
 ### Example
 short arguments
- 
+
     pysendmail -f from@gmail.com \
         -t to@gmail.com \
         -m "message from pysendmail" \
@@ -34,7 +32,7 @@ short argumens (inline)
     pysendmail -f from@gmail.com -t to@gmail.com -m "message from pysendmail" -u from@gmail.com -p password -s smtp.gmail.com:587 -T TRUE
 
 long argumens
- 
+
     pysendmail --fromemail from@gmail.com \
         --toeamail to@gmail.com \
         --message "message from pysendmail" \
@@ -73,3 +71,4 @@ PYSENDMAIL_MESSAGE="message from pysendmail"
 
 pysendmail
 ```
+

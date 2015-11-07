@@ -1,6 +1,7 @@
 # pysendmail
-# author: Ondrej Sika, http://ondrejsika.com, ondrej@ondrejsika.com
-# licence: MIT
+# author, maintainer: Ondrej Sika, <ondrej@ondrejsika.com>
+# license: MIT <https://ondrejsika.com/license/mit.txt>
+
 
 import smtplib
 
